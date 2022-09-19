@@ -11,6 +11,10 @@ const Cart = () => {
         let newCartList = cartItems.filter( item => item.name !== e.target.value)
         setCartItems(newCartList)
     }
+
+    const emptyCart = () => {
+        setCartItems([])
+    }
    
     return (
         <>
@@ -24,6 +28,7 @@ const Cart = () => {
                 </li>)
             }
             </ul>
+            <button onClick={emptyCart}>Empty cart</button>
             
         </>
     )
